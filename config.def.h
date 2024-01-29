@@ -70,5 +70,6 @@ static const struct arg args[] = {
 	{ ram_perc,	     " | R%s",		  		  "NULL"	 	},
 	{ cpu_perc,	     " P%s",		  	"NULL"	 	},
 	{ run_command,	     "@%s",		  	"echo $(($(cat /sys/devices/platform/coretemp.0/hwmon/hwmon*/temp1_input)/1000))"},
+	{ run_command,	     " G%sC",		  	"nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu,temperature.gpu | sed 's/,\ /@/g'"},
 	{ datetime,	     " | %s ",			  "%A %b %d %T"	 	},
 };
