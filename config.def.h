@@ -63,13 +63,14 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
+const char *HELLO2 = "Howdy";
 static const struct arg args[] = {
 	{ battery_perc,	     " B%s |",		  	  "BAT1"	 	},
 	{ netspeed_tx,	     " U%sB/s",	  	  	"wlan0"	 	},
 	{ netspeed_rx,	     " D%sB/s",		  	"wlan0"	 	},
 	{ ram_perc,	     " | R%s",		  		  "NULL"	 	},
 	{ cpu_perc,	     " P%s",		  	"NULL"	 	},
-	{ temp,	     	     "@%s",		  	"/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input"},
+	{ temp,	     	     "@%s",		  	"/dev/cpumon/temp1_input"},
 	{ run_command,	     " G%sC",		  	"nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu,temperature.gpu | sed 's/,\ /@/g'"},
 	{ datetime,	     " | %s ",			  "%A %b %d %T"	 	},
 };
