@@ -63,7 +63,6 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
-const char *HELLO2 = "Howdy";
 static const struct arg args[] = {
 	{ battery_perc,	     " B%s |",		  	  "BAT1"	 	},
 	{ netspeed_tx,	     " U%sB/s",	  	  	"wlan0"	 	},
