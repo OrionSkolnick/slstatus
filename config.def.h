@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 500;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -64,9 +64,10 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	{ battery_perc,	     " B%s |",		  	  "BAT1"	 	},
 	{ netspeed_tx,	     " U%sB/s",	  	  	"wlan0"	 	},
 	{ netspeed_rx,	     " D%sB/s",		  	"wlan0"	 	},
+	{ vol_perc,	         " | V%s",		  	  "/dev/dsp1"	 	},
+	{ battery_perc,	     " | B%s",		  	  "BAT1"	 	},
 	{ ram_perc,	     " | R%s",		  		  "NULL"	 	},
 	{ cpu_perc,	     " P%s",		  	"NULL"	 	},
 	{ temp,	     	     "@%s",		  	"/dev/cpumon/temp1_input"},
