@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 500;
+const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -66,11 +66,10 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	{ netspeed_tx,	     " U%sB/s",	  	  	"wlan0"	 	},
 	{ netspeed_rx,	     " D%sB/s",		  	"wlan0"	 	},
-	{ vol_perc,	         " | V%s",		  	  "/dev/dsp1"	 	},
-	{ battery_perc,	     " | B%s",		  	  "BAT1"	 	},
 	{ ram_perc,	     " | R%s",		  		  "NULL"	 	},
 	{ cpu_perc,	     " P%s",		  	"NULL"	 	},
 	{ temp,	     	     "@%s",		  	"/dev/cpumon/temp1_input"},
 	{ run_command,	     " G%sC",		  	"nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu,temperature.gpu | sed 's/,\ /@/g'"},
 	{ datetime,	     " | %s ",			  "%A %b %d %T"	 	},
+	{ battery_perc,	     "| B%s ",		  	  "BAT1"	 	},
 };
