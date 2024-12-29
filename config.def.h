@@ -69,7 +69,7 @@ static const struct arg args[] = {
 	{ ram_perc,	     " |  %s%%",		  		  "NULL"	 	},
 	{ cpu_perc,	     "  %s",		  	"NULL"	 	},
 	{ temp,	     	     "%%%sC",		  	"/dev/cpumon/temp1_input"},
-	{ run_command,	     " G%sC",		  	"nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu,temperature.gpu | sed 's/,\ /%/g'"},
+	{ run_command,	     " 󰡁%sC",		  	"nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu,temperature.gpu | sed 's/,\ /%/g'"},
 	{ datetime,	     " | %s ",			  "%A %b %d %T"	 	},
 	{ battery_perc,	     "|  %s%% ",		  	  "BAT1"	 	},
 };
