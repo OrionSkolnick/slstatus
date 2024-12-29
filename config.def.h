@@ -64,12 +64,12 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	{ netspeed_tx,	     " U%sB/s",	  	  	"wlan0"	 	},
-	{ netspeed_rx,	     " D%sB/s",		  	"wlan0"	 	},
-	{ ram_perc,	     " | R%s",		  		  "NULL"	 	},
-	{ cpu_perc,	     " P%s",		  	"NULL"	 	},
-	{ temp,	     	     "@%s",		  	"/dev/cpumon/temp1_input"},
-	{ run_command,	     " G%sC",		  	"nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu,temperature.gpu | sed 's/,\ /@/g'"},
+	{ netspeed_tx,	     "  %sB/s",	  	  	"wlan0"	 	},
+	{ netspeed_rx,	     "  %sB/s",		  	"wlan0"	 	},
+	{ ram_perc,	     " |  %s%%",		  		  "NULL"	 	},
+	{ cpu_perc,	     "  %s",		  	"NULL"	 	},
+	{ temp,	     	     "%%%sC",		  	"/dev/cpumon/temp1_input"},
+	{ run_command,	     " G%sC",		  	"nvidia-smi --format=csv,noheader,nounits --query-gpu=utilization.gpu,temperature.gpu | sed 's/,\ /%/g'"},
 	{ datetime,	     " | %s ",			  "%A %b %d %T"	 	},
-	{ battery_perc,	     "| B%s ",		  	  "BAT1"	 	},
+	{ battery_perc,	     "|  %s%% ",		  	  "BAT1"	 	},
 };
